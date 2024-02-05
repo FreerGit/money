@@ -49,7 +49,5 @@ min_max :: proc(t: ^testing.T) {
 	min := new(0.000001)
 	max := new(9_999_999_999.999_999)
 	testing.expect(t, to_f64(min) == 0.000001)
-	testing.expect(t, to_f64(min) == 0.000001)
-	testing.expect(t, to_f64(min) == 0.000001)
 	testing.expect(t, to_f64(max) == 9_999_999_999.999_999)
 }
