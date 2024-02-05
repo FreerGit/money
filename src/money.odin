@@ -17,12 +17,12 @@ to_f64 :: proc(m: Money) -> f64 {
 	return f64(m) / 1_000_000.0
 }
 
-@(test)
+@(test, private)
 money_size :: proc(t: ^testing.T) {
 	testing.expect(t, size_of(f64) == size_of(Money))
 }
 
-@(test)
+@(test, private)
 conversion_f64 :: proc(t: ^testing.T) {
 	my_rand: rand.Rand
 	rand.init(&my_rand, 0)
@@ -33,7 +33,7 @@ conversion_f64 :: proc(t: ^testing.T) {
 	}
 }
 
-@(test)
+@(test, private)
 conversion_money :: proc(t: ^testing.T) {
 	my_rand: rand.Rand
 	rand.init(&my_rand, 0)
@@ -44,7 +44,7 @@ conversion_money :: proc(t: ^testing.T) {
 	}
 }
 
-@(test)
+@(test, private)
 min_max :: proc(t: ^testing.T) {
 	min := new(0.000001)
 	max := new(9_999_999_999.999_999)
